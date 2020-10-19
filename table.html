@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+  <title>Tables</title>
+  <script>
+    function red_click() {
+      document.querySelector('table').style.border="3px solid red";
+    }
+    function blue_click() {
+      document.querySelector('table').style.border="3px solid blue";
+    }
+    function black_click() {
+      document.querySelector('table').style.border="3px solid black";  
+    };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('select').onchange = function() {
+      document.querySelector('table').style.borderWidth = this.value;
+    }
+  });
+  
+</script>
+</head>
+<body>
+  <div class="column side">
+  <p> </p>
+  </div>
+  <div class="column middle">
+    <br>
+    <h1>Clients contrats</h1>
+    <br>
+    <table>
+      <thead>
+          <tr>
+              <th>Client</th>
+              <th>Type of contract</th>
+              <th>Sign date</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Ana Toriello</td>
+              <td>Leasing</td>
+              <td>October 7, 2020</td>
+          </tr>
+          <tr>
+              <td>Jose Rodriguez</td>
+              <td>Sale</td>
+              <td>October 7, 2020</td>
+          </tr>
+          <tr>
+              <td id="special">Alejandro Cordova</td>
+              <td>Loan</td>
+              <td>October 10, 2020</td>
+          </tr>
+      </tbody>
+    </table>
+    <br>
+    <button onclick="red_click()" id="red">Red</button>
+    <button onclick="blue_click()" id="blue">Blue</button>
+    <button onclick="black_click()" id="black">Black</button>
+  <br>
+  <br>
+  <select>
+    <option value="2px">2px</option>
+    <option value="3px">3px</option>
+    <option value="4px">4px</option>
+</select>
+    <div class="column side">
+  <p> </p>
+  </div>
+</body>
+</html>
